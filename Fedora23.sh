@@ -9,3 +9,4 @@ systemctl enable docker
 systemctl start docker
 groupadd docker
 usermod -aG docker root
+iptables-save >> /etc/sysconfig/iptables
