@@ -4,7 +4,7 @@ dnf update && dnf install policycoreutils policycoreutils-python checkpolicy git
 systemctl disable firewalld && systemctl stop firewalld && systemctl unmask firewalld
 systemctl enable iptables.service && systemctl start iptables.service
 curl -fsSL https://get.docker.com/ | sh
-iptables -t filter -N DOCKER
+iptables -t filter -N DOCKER #https://github.com/docker/docker/issues/16816
 systemctl enable docker
 systemctl start docker
 groupadd docker
