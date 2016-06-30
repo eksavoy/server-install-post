@@ -10,3 +10,5 @@ systemctl start docker
 groupadd docker
 usermod -aG docker root
 iptables-save >> /etc/sysconfig/iptables
+
+yum install -y yum-utils && rpm --import "https://sks-keyservers.net/pks/lookup?op=get&search=0xee6d536cf7dc86e2d7d56f59a178ac6c6238f52e" && yum-config-manager --add-repo https://packages.docker.com/1.11/yum/repo/main/centos/7 &&  dnf  install -y --best --allowerasing docker-engine docker-engine-selinux
